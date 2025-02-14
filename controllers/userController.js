@@ -26,6 +26,8 @@ const loginController = async(req, res) => {
 
 const registerController = async(req, res) => {
     try {
+        console.log("Enter register");
+        
         const newUser = new userModel(req.body);
         await newUser.save();
 

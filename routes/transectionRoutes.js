@@ -6,11 +6,10 @@ import {
     deleteTransection 
 } from "../controllers/transectionCtrl.js";
 
-const router = express.Router();
+const transRouter = express.Router();
+transRouter.post("/add-transection", addTransection);
+transRouter.post("/edit-transection", editTransection);
+transRouter.post("/delete-transection", deleteTransection);
+transRouter.post("/get-transection", getAllTransection)
 
-router.post("/add-transection", addTransection);
-router.post("/edit-transection", editTransection);
-router.post("/delete-transection", deleteTransection);
-router.post("/get-transection", getAllTransection)
-
-export default router;
+export default transRouter;
